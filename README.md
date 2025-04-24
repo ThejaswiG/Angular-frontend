@@ -1,4 +1,4 @@
-# EcoSave Club Frontend
+# Arts Club Snist Frontend
 
 Welcome to the Arts Club Frontend repository! This project is dedicated to the development of the frontend for the EcoSave Club website as .
 
