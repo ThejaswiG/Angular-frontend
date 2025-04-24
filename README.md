@@ -1,6 +1,6 @@
 # EcoSave Club Frontend
 
-Welcome to the EcoSave Club Frontend repository! This project is dedicated to the development of the frontend for the EcoSave Club website as .
+Welcome to the Arts Club Frontend repository! This project is dedicated to the development of the frontend for the EcoSave Club website as .
 
 ## Project Overview
 
@@ -36,5 +36,5 @@ To use the frontend locally, follow these steps:
       ng serve
    ```
 
-5. **Visit http://localhost:4200 in your browser to explore the EcoSave website.**
+
 
