@@ -1,0 +1,169 @@
+/* bootstrap 5.0.2 */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+
+/* angular material theme */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* ng-select theme */
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+:root {
+  --primary-color: #309975;
+  --light-primary-color: #58b368;
+  --secondary-color: #454d66;
+  --third-color: #dad873;
+  --light-third-color: #efeeb4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--secondary-color);
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlight {
+  color: var(--light-primary-color);
+}
+
+.fs-10 {
+  font-size: 4rem !important;
+}
+
+.font-weak {
+  color: #ccc;
+}
+
+.font-middle-weak {
+  color: #545454;
+}
+
+.been-liked {
+  color: rgb(191, 15, 15);
+}
+
+.logo-bg {
+  background-image: url("assets/club-profile-img.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: 1px solid #ccc;
+}
+
+.guest-user-bg {
+  background-image: url("assets/default/Guest-user.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: 1px solid #ccc;
+}
+
+.non-navheight {
+  height: calc(100vh - 64px);
+}
+
+.profile-img-container {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.profile-img-container img {
+  width: 100%;
+}
+
+.p-spacing {
+  line-height: 35px;
+}
+
+.mw-500px {
+  max-width: 500px;
+}
+
+.non-nav-height {
+  max-height: calc(100vh - 64px);
+  overflow: scroll;
+}
+
+.active-nav-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+.w-200px {
+  width: 200px;
+}
+
+.h-10px {
+  height: 10px;
+}
+
+.w-30px {
+  width: 30px;
+}
+
+.h-300px {
+  height: 300px;
+}
+
+.w-300px {
+  width: 300px;
+}
+
+.loading-animation {
+  animation: loading 1.5s infinite;
+}
+
+/* animation for loading opacity changes */
+@keyframes loading {
+  0% {
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.bg-team-memebers {
+  background-image: url("assets/club-members.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.fs-small {
+  font-size: 0.8rem;
+}

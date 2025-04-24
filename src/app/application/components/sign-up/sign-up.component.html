@@ -1,0 +1,146 @@
+<div class="container mt-5">
+  <h1 class="text-center fs-1 highlight">Sign in</h1>
+  <form [formGroup]="Form" (ngSubmit)="onSubmit()" class="form-signin">
+    <app-message-text *ngIf="message" [message]="message"></app-message-text>
+    <div>
+      <label class="form-label" for="username">username</label>
+      <input
+        type="text"
+        id="username"
+        [ngClass]="{
+          'is-invalid': fieldHasAnyError('username'),
+          'form-control': true
+        }"
+        formControlName="username"
+        placeholder="username"
+      />
+      <app-input-error-message *ngIf="haveRequiredError('username')" />
+      <app-input-error-message
+        *ngIf="fieldHasError('username')"
+        [message]="getFieldServerErrorMessage('username')"
+      />
+    </div>
+
+    <div>
+      <label class="form-label" for="email">email</label>
+      <input
+        type="email"
+        id="email"
+        [ngClass]="{
+          'is-invalid': fieldHasAnyError('email'),
+          'form-control': true
+        }"
+        formControlName="email"
+        placeholder="email"
+      />
+      <app-input-error-message *ngIf="haveRequiredError('email')" />
+      <app-input-error-message
+        *ngIf="fieldHasError('email')"
+        [message]="getFieldServerErrorMessage('email')"
+      />
+    </div>
+
+    <div>
+      <label class="form-label" for="first_name">first name</label>
+      <input
+        type="text"
+        id="first_name"
+        [ngClass]="{
+          'is-invalid': fieldHasAnyError('email'),
+          'form-control': true
+        }"
+        formControlName="first_name"
+        placeholder="first name"
+      />
+      <app-input-error-message *ngIf="haveRequiredError('first_name')" />
+      <app-input-error-message
+        *ngIf="fieldHasError('first_name')"
+        [message]="getFieldServerErrorMessage('first_name')"
+      />
+    </div>
+
+    <div>
+      <label class="form-label" for="last_name">last name</label>
+      <input
+        type="text"
+        id="last_name"
+        [ngClass]="{
+          'is-invalid': fieldHasAnyError('last_name'),
+          'form-control': true
+        }"
+        formControlName="last_name"
+        placeholder="last_name"
+      />
+      <app-input-error-message *ngIf="haveRequiredError('last_name')" />
+      <app-input-error-message
+        *ngIf="fieldHasError('last_name')"
+        [message]="getFieldServerErrorMessage('last_name')"
+      />
+    </div>
+
+    <div>
+      <label class="form-label" for="phone_number">phone number</label>
+      <input
+        type="number"
+        id="phone_number"
+        [ngClass]="{
+          'is-invalid': fieldHasAnyError('phone_number'),
+          'form-control': true
+        }"
+        formControlName="phone_number"
+        placeholder="phone number"
+      />
+      <app-input-error-message *ngIf="haveRequiredError('phone_number')" />
+      <app-input-error-message
+        *ngIf="fieldHasError('phone_number')"
+        [message]="getFieldServerErrorMessage('phone_number')"
+      />
+    </div>
+
+    <div>
+      <label for="gender" class="form-label">gender</label>
+      <select
+        name="gender"
+        id="gender"
+        class="form-select"
+        formControlName="gender"
+      >
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="form-label" for="inputPassword">Password</label>
+      <input
+        type="password"
+        id="inputPassword"
+        [ngClass]="{
+          'is-invalid': fieldHasAnyError('password'),
+          'form-control': true
+        }"
+        formControlName="password"
+        placeholder="Password"
+        required
+      />
+      <app-input-error-message *ngIf="haveRequiredError('password')" />
+      <app-input-error-message
+        *ngIf="fieldHasError('password')"
+        [message]="getFieldServerErrorMessage('password')"
+      />
+    </div>
+    <div class="text-muted mt-3">
+      Already have an account?
+      <a routerLink="/signin" class="text-primary">Sign in</a>
+    </div>
+    <div>
+      <button
+        class="mt-4 btn btn-primary"
+        [disabled]="isSubmitting || Form.invalid"
+        type="submit"
+      >
+        {{ isSubmitting ? "Loading..." : "Sign up" }}
+      </button>
+    </div>
+  </form>
+</div>
